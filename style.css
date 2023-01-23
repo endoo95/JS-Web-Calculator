@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap');
+
+html{
+    background-color: #282828;
+    color: #f0f0f0;
+    font-family: 'Sora', sans-serif;
+    font-size: 28px;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-frame{
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: #383838;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.calc-frame #operator-display{
+    position: absolute;
+    top: 75px;
+    left: 12px;
+}
+
+.calc-frame .display-frame, #memory-frame{
+    background-color: #323232;
+}
+
+.calc-frame .display-frame{
+    display: grid;
+    text-align: right;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 60px;
+    padding-top: 32px;
+    padding-right: 12px;
+}
+
+.calc-frame .display-frame #last-operation{
+    font-size: .8rem;
+    color: #999999;
+    user-select: none;
+}
+
+.calc-frame .display-frame #result{
+    font-size: 1.2rem;
+    color: #ffffff;
+    align-self: center
+}
+
+.calc-frame #memory-frame{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 2fr;
+    grid-template-rows: auto;
+    gap: 4px;
+    align-items: center;
+    padding-top: 12px;
+    border-bottom: 2px #323232 solid;
+}
+
+.calc-frame #memory-frame .memory-textfield, .memory-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .7rem;
+    color: #707070;
+    border: 2px hidden solid;
+    user-select: none;
+}
+
+.calc-frame #memory-frame .memory-button:active{
+    background-color: #383838;
+}
+
+.calc-frame #memory-frame #memory-result{
+    display: block;
+    text-align: right;
+    padding-right: 12px;
+}
+
+.calc-frame .calc-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 80px);
+    gap: 1px;
+    align-content: center;
+    justify-content: center;
+    user-select: none;
+    border: 2px solid #383838;
+}
+
+.calc-frame .calc-grid .operator, .number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #323232;
+}
+
+.calc-frame .calc-grid .operator:active, .number:active{
+    background-color: #323232;
+}
+
+.calc-frame .calc-grid .operator{
+    color: #ababab;
+}
+
+.calc-frame .calc-grid #equals{
+    position: relative;
+    margin: 0px auto;
+    width: 80px;
+    background-color: #424242;
+    border-radius: 100%;
+}
+
+.calc-frame .calc-grid #equals, #clear-everything, #step-back{
+    background-color: #3d3d3d;
+    color: #ffb006;
+}
+
+.calc-frame .calc-grid #equals:active, #clear-everything:active, #step-back:active{
+    background-color: #323232;
+}
+
+.calc-frame .calc-grid #reverse, #clear-everything{
+    font-size: .8rem;
+}

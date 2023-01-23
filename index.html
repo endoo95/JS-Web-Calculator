@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calc-frame">
+        <div class="operator-display" id="operator-display">O</div>
+        <div class="display-frame">
+            <div class="display" id="last-operation">0</div>
+            <div class="display" id="result">0</div>
+        </div>        
+        <div id="memory-frame">
+            <div class="memory-button" id="memory-clear">MC</div>
+            <div class="memory-button" id="memory-recall">MR</div>
+            <div class="memory-button" id="memory-add">M+</div>
+            <div class="memory-button" id="memory-subtract">M-</div>
+            <div class="memory-textfield" id="memory-result">xxx</div>
+        </div>
+        <div class="calc-grid">
+            <div class="operator" id="clear-everything">CE</div>
+            <div class="operator" id="step-back">&#171;</div>
+            <div class="operator" id="modulo">%</div>
+            <div class="operator" id="divide">&#247;</div>
+            
+            <div class="number" id="7">7</div>
+            <div class="number" id="8">8</div>
+            <div class="number" id="9">9</div>
+            <div class="operator" id="multiply">x</div>
+            
+            <div class="number" id="4">4</div>
+            <div class="number" id="5">5</div>
+            <div class="number" id="6">6</div>
+            <div class="operator" id="subtract">-</div>
+            
+            <div class="number" id="1">1</div>
+            <div class="number" id="2">2</div>
+            <div class="number" id="3">3</div>
+            <div class="operator" id="add">+</div>
+            
+            <div class="operator" id="reverse">+/-</div>
+            <div class="number" id="0">0</div>
+            <div class="number" id=".">.</div>
+            <div class="operator" id="equals">=</div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
